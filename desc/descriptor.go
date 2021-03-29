@@ -125,6 +125,11 @@ func (fd *FileDescriptor) GetSourceInfo() *dpb.SourceCodeInfo_Location {
 	return nil
 }
 
+// AddSourceInfo
+func (fd *FileDescriptor) AddSourceInfo(m internal.SourceInfoMap) {
+	internal.PopulateSourceInfoMap(fd.proto, m)
+}
+
 // GetSourceINFO
 func (fd *FileDescriptor) GetSourceINFO() internal.SourceInfoMap {
 	return fd.sourceInfo
