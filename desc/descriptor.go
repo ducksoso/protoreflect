@@ -1415,6 +1415,11 @@ func (sd *ServiceDescriptor) GetMethods() []*MethodDescriptor {
 	return sd.methods
 }
 
+// AddMethods add method to this service
+func (sd *ServiceDescriptor) AddMethods(methods []*MethodDescriptor) {
+	sd.methods = append(sd.methods, methods...)
+}
+
 // FindMethodByName finds the method with the given name. If no such method exists
 // then nil is returned.
 func (sd *ServiceDescriptor) FindMethodByName(name string) *MethodDescriptor {
