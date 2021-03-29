@@ -125,6 +125,11 @@ func (fd *FileDescriptor) GetSourceInfo() *dpb.SourceCodeInfo_Location {
 	return nil
 }
 
+// GetSourceINFO
+func (fd *FileDescriptor) GetSourceINFO() internal.SourceInfoMap {
+	return fd.sourceInfo
+}
+
 // AsProto returns the underlying descriptor proto. Most usages will be more
 // interested in AsFileDescriptorProto, which has a concrete return type. This
 // generic version is present to satisfy the Descriptor interface.
