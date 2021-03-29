@@ -12,9 +12,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 
-	"github.com/jhump/protoreflect/codec"
-	"github.com/jhump/protoreflect/desc"
-	"github.com/jhump/protoreflect/internal"
+	"github.com/ducksoso/protoreflect/codec"
+	"github.com/ducksoso/protoreflect/desc"
+	"github.com/ducksoso/protoreflect/internal"
 )
 
 // ErrUnknownTagNumber is an error that is returned when an operation refers

@@ -12,10 +12,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 
-	"github.com/jhump/protoreflect/desc"
-	"github.com/jhump/protoreflect/desc/protoparse"
-	_ "github.com/jhump/protoreflect/internal/testprotos"
-	"github.com/jhump/protoreflect/internal/testutil"
+	"github.com/ducksoso/protoreflect/desc"
+	"github.com/ducksoso/protoreflect/desc/protoparse"
+	_ "github.com/ducksoso/protoreflect/internal/testprotos"
+	"github.com/ducksoso/protoreflect/internal/testutil"
 )
 
 const (

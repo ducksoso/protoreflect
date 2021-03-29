@@ -5,9 +5,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"github.com/jhump/protoreflect/desc"
-	"github.com/jhump/protoreflect/internal/testprotos"
-	"github.com/jhump/protoreflect/internal/testutil"
+	"github.com/ducksoso/protoreflect/desc"
+	"github.com/ducksoso/protoreflect/internal/testprotos"
+	"github.com/ducksoso/protoreflect/internal/testutil"
 )
 
 func TestTextUnaryFields(t *testing.T) {

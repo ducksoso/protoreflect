@@ -5,11 +5,11 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"github.com/jhump/protoreflect/codec"
-	"github.com/jhump/protoreflect/desc"
-	"github.com/jhump/protoreflect/dynamic"
-	"github.com/jhump/protoreflect/internal/testprotos"
-	"github.com/jhump/protoreflect/internal/testutil"
+	"github.com/ducksoso/protoreflect/codec"
+	"github.com/ducksoso/protoreflect/desc"
+	"github.com/ducksoso/protoreflect/dynamic"
+	"github.com/ducksoso/protoreflect/internal/testprotos"
+	"github.com/ducksoso/protoreflect/internal/testutil"
 )
 
 func TestEncodeMessage(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jhump/protoreflect/desc/protoparse/ast"
-	"github.com/jhump/protoreflect/internal/testutil"
+	"github.com/ducksoso/protoreflect/desc/protoparse/ast"
+	"github.com/ducksoso/protoreflect/internal/testutil"
 )
 
 func TestASTRoundTrips(t *testing.T) {

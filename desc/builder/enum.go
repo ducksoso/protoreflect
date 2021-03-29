@@ -7,8 +7,8 @@ import (
 	"github.com/golang/protobuf/proto"
 	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
 
-	"github.com/jhump/protoreflect/desc"
-	"github.com/jhump/protoreflect/desc/internal"
+	"github.com/ducksoso/protoreflect/desc"
+	"github.com/ducksoso/protoreflect/desc/internal"
 )
 
 // EnumBuilder is a builder used to construct a desc.EnumDescriptor.
