@@ -459,15 +459,17 @@ func (p *Printer) printFile(fd *desc.FileDescriptor, mf *dynamic.MessageFactory,
 		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_dependencyTag, elementIndex: i, order: -2})
 	}
 	elements.addrs = append(elements.addrs, optionsAsElementAddrs(internal.File_optionsTag, -1, opts)...)
-	for i := range fd.GetMessageTypes() {
-		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_messagesTag, elementIndex: i})
+
+	for i := range fd.GetServices() {
+		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_servicesTag, elementIndex: i})
 	}
 	for i := range fd.GetEnumTypes() {
 		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_enumsTag, elementIndex: i})
 	}
-	for i := range fd.GetServices() {
-		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_servicesTag, elementIndex: i})
+	for i := range fd.GetMessageTypes() {
+		elements.addrs = append(elements.addrs, elementAddr{elementType: internal.File_messagesTag, elementIndex: i})
 	}
+
 	exts := p.computeExtensions(sourceInfo, fd.GetExtensions(), []int32{internal.File_extensionsTag})
 	for i, extd := range fd.GetExtensions() {
 		if extd.GetType() == descriptor.FieldDescriptorProto_TYPE_GROUP {

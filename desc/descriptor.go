@@ -170,6 +170,11 @@ func (fd *FileDescriptor) GetMessageTypes() []*MessageDescriptor {
 	return fd.messages
 }
 
+// AddMessageTypes add messages to this file
+func (fd *FileDescriptor) AddMessageTypes(messages []*MessageDescriptor) {
+	fd.messages = append(fd.messages, messages...)
+}
+
 // GetEnumTypes returns all top-level enums declared in this file.
 func (fd *FileDescriptor) GetEnumTypes() []*EnumDescriptor {
 	return fd.enums
@@ -183,6 +188,11 @@ func (fd *FileDescriptor) GetExtensions() []*FieldDescriptor {
 // GetServices returns all services declared in this file.
 func (fd *FileDescriptor) GetServices() []*ServiceDescriptor {
 	return fd.services
+}
+
+// AddServices add services to this file
+func (fd *FileDescriptor) AddServices(services []*ServiceDescriptor)  {
+	fd.services = append(fd.services, services...)
 }
 
 // FindSymbol returns the descriptor contained within this file for the
